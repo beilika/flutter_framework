@@ -10,6 +10,7 @@
 .svn/
 
 # IntelliJ related
+*.iml
 *.ipr
 *.iws
 .idea/
@@ -70,31 +71,3 @@
 !**/ios/**/default.pbxuser
 !**/ios/**/default.perspectivev3
 !/packages/flutter_tools/test/data/dart_dependencies_test/**/.packages
-.gitignore
-.metadata
-README.md
-android/app/build.gradle
-android/app/src/debug/
-android/app/src/main/AndroidManifest.xml
-android/app/src/main/kotlin/
-android/app/src/main/res/
-android/app/src/profile/
-android/build.gradle
-android/flutter_framework_android.iml
-android/gradle.properties
-android/gradle/wrapper/gradle-wrapper.properties
-android/settings.gradle
-flutter_framework.iml
-ios/Flutter/AppFrameworkInfo.plist
-ios/Flutter/Debug.xcconfig
-ios/Flutter/Release.xcconfig
-ios/Runner.xcodeproj/
-ios/Runner.xcworkspace/
-ios/Runner/AppDelegate.swift
-ios/Runner/Assets.xcassets/
-ios/Runner/Base.lproj/
-ios/Runner/Info.plist
-ios/Runner/Runner-Bridging-Header.h
-lib/
-pubspec.lock
-test/
