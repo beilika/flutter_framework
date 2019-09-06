@@ -1,8 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_framework/widget/my_app_bar.dart';
-import 'package:flutter_framework/widget/my_drawer.dart';
+import 'package:flutter_framework/widget/drawer/my_drawer.dart';
 import 'package:flutter_framework/widget/my_swiper.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 //滚动的最大值,阈值
 const APPBAR_SCROLL_OFFSET = 100;
 //appbar透明度
@@ -22,6 +23,8 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+    //设置字体大小根据系统的“字体大小”辅助选项来进行缩放,默认为false
+    ScreenUtil.instance = ScreenUtil(allowFontScaling: true)..init(context);
     //Scaffold 实现了基本的 Material Design 布局结构
     return Scaffold(
       //Stack 层叠组件，前面的元素在上面，后面的元素在下面
@@ -47,7 +50,7 @@ class _HomePageState extends State<HomePage> {
                     children: <Widget>[
                       MySwiper(imageUrls: _imageUrls),
                       Container(
-                        height: 800,
+                        height: ScreenUtil().setWidth(2200),
                         //ListTile 通常用于在 Flutter 中填充 ListView
                         child: ListTile(title: Text('哈哈'),),
                       )

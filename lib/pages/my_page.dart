@@ -1,15 +1,11 @@
 import 'package:flutter/material.dart';
 
-/**
- * 首页界面
- */
+/*我的界面*/
 class MyPage extends StatefulWidget {
   @override
   _MyPageState createState() => _MyPageState();
 }
-/**
- * _:可以定义为私有类，不被外界访问
- */
+
 class _MyPageState extends State<MyPage> {
   @override
   Widget build(BuildContext context) {

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
 /// 轮播图组件
 class MySwiper extends StatelessWidget {
@@ -10,7 +11,7 @@ class MySwiper extends StatelessWidget {
   Widget build(BuildContext context) {
     //导航栏 Opacity包裹，可以改变组件透明度
     return Container(
-      height: 160,
+      height: ScreenUtil().setHeight(450),
       //Swiper 轮播图组件
       child: Swiper(
         itemCount: imageUrls.length, // 条目个数
