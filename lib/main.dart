@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_framework/navigator/tab_navigator.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import 'navigator/my_bottom_app_bar.dart';
 /// flutter 应用程序入口
 void main() => runApp(MyApp());
 
@@ -10,10 +11,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.lightBlue,
       ),
-      home: TabNavigator(),
+//      home: TabNavigator(),
+      home: MyBottomAppBar(),
     );
   }
 }
+
 

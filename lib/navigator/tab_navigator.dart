@@ -15,8 +15,11 @@ class TabNavigator extends StatefulWidget {
 }
 /*_:可以定义为私有类，不被外界访问*/
 class _TabNavigatorState extends State<TabNavigator> {
+  //首页, 搜索, 旅拍, 我的
+  List<Widget> _listPage = [HomePage(), SearchPage(), TravelPage(), MyPage(),];
 
   final PageController _controller = PageController(initialPage: 0,);
+
   @override
   Widget build(BuildContext context) {
     //Scaffold 实现了基本的 Material Design 布局结构和手机屏幕适配
@@ -32,16 +35,7 @@ class _TabNavigatorState extends State<TabNavigator> {
           });
         },
         // 这个里面就是要显示的界面
-        children: <Widget>[
-          //首页
-          HomePage(),
-          //搜索
-          SearchPage(),
-          //旅拍
-          TravelPage(),
-          // 我的
-          MyPage(),
-        ],
+        children: _listPage,
       ),
       bottomNavigationBar: BottomNavigationBar(
         //设置当前选中的是哪一个
