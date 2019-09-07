@@ -26,7 +26,8 @@ class _MyBottomAppBarState extends State<MyBottomAppBar> {
       body:_eachView[_index],
       floatingActionButton: FloatingActionButton(
         onPressed: (){
-          NavigatorUtil.push(context, SearchPage());
+          //带有平滑切换效果的路由
+          NavigatorUtil.pushCustomRouter(context, SearchPage());
         },
         tooltip: 'Increment',
         child: Icon(
