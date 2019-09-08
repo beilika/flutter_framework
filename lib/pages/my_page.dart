@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_framework/widget/warp_demo.dart';
 
 /*我的界面*/
 class MyPage extends StatefulWidget {
@@ -12,7 +13,7 @@ class _MyPageState extends State<MyPage> {
     //Scaffold 实现了基本的 Material Design 布局结构
     return Scaffold(
       body: Center(
-        child: Text('我的'),
+        child: WarpDemo(),
       ),
     );
   }

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_framework/widget/my_app_bar.dart';
 import 'package:flutter_framework/widget/drawer/my_drawer.dart';
 import 'package:flutter_framework/widget/my_swiper.dart';
+import 'package:flutter_framework/widget/warp_demo.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 //滚动的最大值,阈值
 const APPBAR_SCROLL_OFFSET = 100;
