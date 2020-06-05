@@ -14,7 +14,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.lightBlue,
       ),
+        //不带底部+号的底部导航栏
 //      home: TabNavigator(),
+    //带底部＋号的底部导航栏
       home: MyBottomAppBar(),
     );
   }
