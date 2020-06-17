@@ -1,10 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_framework/util/navigator_util.dart';
 import 'package:flutter_framework/widget/my_app_bar.dart';
 import 'package:flutter_framework/widget/drawer/my_drawer.dart';
 import 'package:flutter_framework/widget/my_swiper.dart';
 import 'package:flutter_framework/widget/warp_demo.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutterlogin/login.dart';
 //滚动的最大值,阈值
 const APPBAR_SCROLL_OFFSET = 100;
 //appbar透明度
@@ -53,7 +55,12 @@ class _HomePageState extends State<HomePage> {
                       Container(
                         height: ScreenUtil().setWidth(2200),
                         //ListTile 通常用于在 Flutter 中填充 ListView
-                        child: ListTile(title: Text('哈哈'),),
+                        child: ListTile(
+                          title: Text('点击跳转登录'),
+                          onTap: (){
+                            NavigatorUtil.pushRightBack(context, Login());
+                          },
+                        ),
                       )
                     ],
                   ),

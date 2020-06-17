@@ -16,6 +16,12 @@ dependencies:
   # 屏幕适配组件
   flutter_screenutil: ^0.6.0
 
+  #flutter 轻提示
+  fluttertoast: ^4.0.0
+
+  flutterlogin:
+    path: ./flutter_login
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
