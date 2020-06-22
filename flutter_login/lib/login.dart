@@ -68,9 +68,8 @@ class _LoginState extends State<Login> with SingleTickerProviderStateMixin,Autom
 
     Widget title2Widget = Container(
       child: Text(
-        '中电万维\n大后端综合管理系统',
-        style: TextStyle(
-            color: Colors.black, fontSize: 28.0, fontWeight: FontWeight.w400),
+        '强哥\nflutter开发框架',
+        style: TextStyle(color: Colors.black, fontSize: 28.0, fontWeight: FontWeight.w400),
         maxLines: 2,
       ),
       width: ScreenUtils.screenW(context) - ScreenUtils.getScaleW(context, 70),
