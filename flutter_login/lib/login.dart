@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:flutterbase/loadingDialog.dart';
 import 'package:flutterbase/base_exp.dart';
 
 import 'login_state_tool.dart';
