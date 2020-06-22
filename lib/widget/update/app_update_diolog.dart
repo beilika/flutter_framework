@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_framework/util/global_config.dart';
-import 'package:flutter_framework/util/screen_utils.dart';
+import 'package:flutterbase/base_exp.dart';
 
 typedef void APPUpdateDialogUpdateCallBack();
 

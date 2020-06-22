@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_framework/model/app_update_entity.dart';
-import 'package:flutter_framework/util/global_config.dart';
-import 'package:flutter_framework/util/screen_utils.dart';
-import 'package:flutter_framework/util/toast.dart';
+import 'package:flutterbase/base_exp.dart';
 import 'package:ota_update/ota_update.dart';
 
 String apkName = '大后端综合管理系统.apk';
@@ -44,7 +42,7 @@ class _AppUpdatePageState extends State<AppUpdatePage> {
               _text = '安装中';
               break;
             case OtaStatus.PERMISSION_NOT_GRANTED_ERROR: // 权限错误
-              Toast.toast(context, msg: "更新失败，请稍后再试 ", position: ToastPostion.center);
+              MyToast.toast(context, msg: "更新失败，请稍后再试 ", position: ToastPostion.center);
               setState(() {
                 _text = '下载失败';
                 _progress = 0;
@@ -56,7 +54,7 @@ class _AppUpdatePageState extends State<AppUpdatePage> {
         },
       );
     } catch (e) {
-      Toast.toast(context, msg: "更新失败，请稍后再试 ", position: ToastPostion.center);
+      MyToast.toast(context, msg: "更新失败，请稍后再试 ", position: ToastPostion.center);
       setState(() {
         _text = '下载失败';
         _progress = 0;

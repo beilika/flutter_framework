@@ -1,5 +1,5 @@
-name: flutterlogin
-description: 登录Plugin
+name: flutterbase
+description: 公共基础插件
 version: 0.0.1
 author:
 homepage:
@@ -12,20 +12,12 @@ dependencies:
   flutter:
     sdk: flutter
 
-
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  #flutter 轻提示
-#  fluttertoast: ^4.0.0
-
   #数据持久化
   shared_preferences: "^0.4.2"
-
-  flutterbase:
-    path: ../flutter_base
-
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
@@ -38,10 +30,10 @@ flutter:
   plugin:
     platforms:
       android:
-        package: qzl.com.flutterlogin
-        pluginClass: FlutterloginPlugin
+        package: qzl.com.flutterbase
+        pluginClass: FlutterbasePlugin
       ios:
-        pluginClass: FlutterloginPlugin
+        pluginClass: FlutterbasePlugin
 
   # To add assets to your plugin package, add an assets section, like this:
   # assets:

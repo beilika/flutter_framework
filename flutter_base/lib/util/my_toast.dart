@@ -8,7 +8,7 @@ enum ToastPostion {
   bottom,
 }
 
-class Toast {
+class MyToast {
   // toast靠它加到屏幕上
   static OverlayEntry _overlayEntry;
   // toast是否正在showing

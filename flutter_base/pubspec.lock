@@ -53,13 +53,6 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
-  flutterbase:
-    dependency: "direct dev"
-    description:
-      path: "../flutter_base"
-      relative: true
-    source: path
-    version: "0.0.1"
   matcher:
     dependency: transitive
     description:

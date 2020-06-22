@@ -27,8 +27,13 @@ dependencies:
   #android应用内更新
   ota_update: ^2.2.1
 
+  #数据持久化
+  shared_preferences: "^0.4.2"
+
   flutterlogin:
     path: ./flutter_login
+  flutterbase:
+    path: ./flutter_base
 
 dev_dependencies:
   flutter_test:
