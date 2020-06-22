@@ -22,6 +22,8 @@ dev_dependencies:
 
   #数据持久化
   shared_preferences: "^0.4.2"
+  # 屏幕适配组件
+  flutter_screenutil: ^2.1.0
 
   flutterbase:
     path: ../flutter_base

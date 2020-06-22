@@ -41,8 +41,8 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     //设置字体大小根据系统的“字体大小”辅助选项来进行缩放,默认为false
-    ScreenUtil.instance = ScreenUtil(allowFontScaling: true)..init(context);
-
+//    ScreenUtil.init(allowFontScaling: true);
+    ScreenUtil.init(allowFontScaling: true);
     //Scaffold 实现了基本的 Material Design 布局结构
     return Scaffold(
       //Stack 层叠组件，前面的元素在上面，后面的元素在下面
@@ -68,7 +68,7 @@ class _HomePageState extends State<HomePage> {
                     children: <Widget>[
                       MySwiper(imageUrls: _imageUrls),
                       Container(
-                        height: ScreenUtil().setWidth(2200),
+                        height: ScreenUtil().setHeight(2200),
                         //ListTile 通常用于在 Flutter 中填充 ListView
                         child: ListView.builder(
                           itemCount: list.length,

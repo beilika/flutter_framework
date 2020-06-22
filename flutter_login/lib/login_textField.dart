@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutterbase/util/screen_utils.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 typedef void LoginTextFieldCallBack(String content);
 
@@ -56,13 +57,13 @@ class _LoginTextFieldState extends State<LoginTextField> {
       decoration: InputDecoration(
         icon: ImageIcon(
           AssetImage(widget.iconStr),
-          size: ScreenUtils.getScaleW(context, 25),
+          size: ScreenUtil().setWidth(75),
         ),
 
         hintText: widget.hintText,
         hintStyle: TextStyle(
             color: Color.fromRGBO(170, 170, 170, 1.0),
-            fontSize: 15.0,
+            fontSize: ScreenUtil().setSp(45),
             fontWeight: FontWeight.w400),
 
         //下划线样式
@@ -89,8 +90,8 @@ class _LoginTextFieldState extends State<LoginTextField> {
                         padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
                         icon: Image.asset(
                           'images/clearBtn.png',
-                          width: ScreenUtils.getScaleW(context, 18),
-                          height: ScreenUtils.getScaleW(context, 18),
+                          width: ScreenUtil().setWidth(54),
+                          height: ScreenUtil().setWidth(54),
                           fit: BoxFit.fill,
                         ),
                         onPressed: () {
@@ -102,8 +103,8 @@ class _LoginTextFieldState extends State<LoginTextField> {
                       ),
                     )
                   : Container(
-                      width: ScreenUtils.getScaleW(context, 18),
-                      height: ScreenUtils.getScaleW(context, 18),
+                      width: ScreenUtil().setWidth(54),
+                      height: ScreenUtil().setHeight(54),
                     ),
               widget.hasShowPasswordIcon
                   ? Expanded(
@@ -113,8 +114,8 @@ class _LoginTextFieldState extends State<LoginTextField> {
                           widget.hiddenPassword
                               ? 'images/hiddenPassword.png'
                               : 'images/lookPassword.png',
-                          width: ScreenUtils.getScaleW(context, 20),
-                          height: ScreenUtils.getScaleW(context, 12),
+                          width: ScreenUtil().setWidth(60),
+                          height: ScreenUtil().setHeight(36),
                           fit: BoxFit.fill,
                         ),
                         onPressed: () {
