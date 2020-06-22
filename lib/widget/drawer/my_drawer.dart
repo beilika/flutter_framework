@@ -1,8 +1,16 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_framework/util/navigator_util.dart';
 import 'package:flutter_framework/widget/drawer/smart_drawer.dart';
-/*左侧抽屉界面*/
+import 'package:flutter_framework/widget/update/app_update_util.dart';
+
+/// @author 强周亮(qiangzhouliang)
+
+/// @desc 左侧抽屉界面
+
+/// @email 2538096489@qq.com
+
+/// @time 2020/6/22 15:58
+
 class MyDrawer extends StatefulWidget {
   @override
   _MyDrawerState createState() => _MyDrawerState();
@@ -38,7 +46,9 @@ class _MyDrawerState extends State<MyDrawer> {
           _ListTitle(context,'Item 1',Icons.school),
           _ListTitle(context,'Item 2',Icons.home),
           Divider(),
-          _ListTitle(context,'Item 1',Icons.list),
+          _ListTitle(context,'检查更新',Icons.update,onTap: (){
+            CheckUpdateUtil(context).checkUpdate();
+          }),
         ],
       ),
       callback: (isOpen) {
@@ -47,12 +57,9 @@ class _MyDrawerState extends State<MyDrawer> {
     );
   }
 }
-Widget _ListTitle(BuildContext context,String title,IconData icon){
+Widget _ListTitle(BuildContext context,String title,IconData icon,{GestureTapCallback onTap}){
   return ListTile(title: Text(title),
-    leading: CircleAvatar(
-      child: Icon(icon),),
-    onTap: () {
-      NavigatorUtil.pop(context);
-    },
+    leading: CircleAvatar(child: Icon(icon),),
+    onTap: onTap,
   );
 }

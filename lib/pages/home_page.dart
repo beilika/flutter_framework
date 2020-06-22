@@ -23,11 +23,26 @@ class _HomePageState extends State<HomePage> {
     'http://pic1.win4000.com/wallpaper/c/53cdd1f7c1f21.jpg',
     'http://pic16.nipic.com/20111006/6239936_092702973000_2.jpg'
   ];
+  //样例列表
+  List list = List();
 
+  @override
+  void initState() {
+    super.initState();
+    list..add(
+        ListTile(
+          title: Text('点击跳转登录'),
+          onTap: (){
+            NavigatorUtil.pushRightBack(context, Login());
+          },
+        )
+    );
+  }
   @override
   Widget build(BuildContext context) {
     //设置字体大小根据系统的“字体大小”辅助选项来进行缩放,默认为false
     ScreenUtil.instance = ScreenUtil(allowFontScaling: true)..init(context);
+
     //Scaffold 实现了基本的 Material Design 布局结构
     return Scaffold(
       //Stack 层叠组件，前面的元素在上面，后面的元素在下面
@@ -55,12 +70,11 @@ class _HomePageState extends State<HomePage> {
                       Container(
                         height: ScreenUtil().setWidth(2200),
                         //ListTile 通常用于在 Flutter 中填充 ListView
-                        child: ListTile(
-                          title: Text('点击跳转登录'),
-                          onTap: (){
-                            NavigatorUtil.pushRightBack(context, Login());
-                          },
-                        ),
+                        child: ListView.builder(
+                          itemCount: list.length,
+                          itemBuilder: (context,index){
+                            return list[index];
+                          }),
                       )
                     ],
                   ),
