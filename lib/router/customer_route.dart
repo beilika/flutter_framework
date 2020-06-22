@@ -1,14 +1,30 @@
 import 'package:flutter/material.dart';
 
+enum CustomerRouteState {
+  fade,//渐变
+  scale, //缩放
+  slide, //左右滑动
+  rotation //旋转缩放
+}
 /*炫酷的跳转路由*/
 class CustomerRoute extends PageRouteBuilder{
   final Widget widget;
-  CustomerRoute(this.widget) :super(
+  CustomerRoute(this.widget,{CustomerRouteState state = CustomerRouteState.slide}) :super(
       //设置动画持续的时间，建议再1和2之间。
       transitionDuration:const Duration(seconds:1),
       pageBuilder:(BuildContext context, Animation<double> animation1, Animation<double> animation2)=> widget,
       //构建动画效果
-      transitionsBuilder:(BuildContext context, Animation<double> animation1, Animation<double> animation2, Widget child) => _slideTransition(animation1, child)
+      transitionsBuilder:(BuildContext context, Animation<double> animation1, Animation<double> animation2, Widget child) {
+        if(state == CustomerRouteState.fade) {
+          return _fadeTransition(animation1, child);
+        } else if(state == CustomerRouteState.scale){
+          return _scaleTransition(animation1, child);
+        } else if(state == CustomerRouteState.rotation){
+          return _rotationTransition(animation1, child);
+        } else {
+          return _slideTransition(animation1, child);
+        }
+      }
   );
 
   //渐隐渐现过渡效果，主要设置opactiy（透明度）属性，值是0.0-1.0。

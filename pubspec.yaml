@@ -18,6 +18,8 @@ dependencies:
 
   #flutter 轻提示
   fluttertoast: ^4.0.0
+  # 网络请求
+  http: ^0.12.0+1
 
   flutterlogin:
     path: ./flutter_login
