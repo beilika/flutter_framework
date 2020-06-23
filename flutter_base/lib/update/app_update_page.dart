@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutterbase/util/global_config.dart';
 import 'package:flutterbase/util/my_toast.dart';
-import 'package:flutterbase/util/screen_utils.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ota_update/ota_update.dart';
 
@@ -68,7 +67,7 @@ class _AppUpdatePageState extends State<AppUpdatePage> {
 
   @override
   Widget build(BuildContext context) {
-    double width = ScreenUtils.screenW(context) - 40;
+    double width = ScreenUtil.screenWidth - 40.w;
 
     Widget iconWidget = Container(
       margin: EdgeInsets.only(top: 30, bottom: 30),

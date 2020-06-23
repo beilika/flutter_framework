@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutterbase/common/line_widget.dart';
 import 'package:flutterbase/util/global_config.dart';
-import 'package:flutterbase/util/screen_utils.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 typedef void DoneClicked();
@@ -11,10 +10,20 @@ typedef void DoneClicked();
 /// @time 2020/6/23 18:29
 class CommonDialog extends Dialog {
   String content;
+  String title;
+  String negative;
+  String positive;
   bool isShowCancle;
   DoneClicked doneClicked;
 
-  static void show(context,content,{barrierDismissible = false,isShowCancle = true,doneClicked,}) {
+  static void show(context,content,
+      {
+        barrierDismissible = false,
+        isShowCancle = true,doneClicked,
+        title = '提示',
+        positive = '确定',
+        negative = '取消'
+      }) {
     showDialog<Null>(
         context: context, //BuildContext对象
         barrierDismissible: barrierDismissible,
@@ -22,6 +31,9 @@ class CommonDialog extends Dialog {
           return CommonDialog(
             content: content,
             isShowCancle: isShowCancle,
+            title: title,
+            negative: negative,
+            positive: positive,
             doneClicked:(){
               Navigator.pop(context);
               doneClicked();
@@ -35,40 +47,36 @@ class CommonDialog extends Dialog {
     this.content,
     this.isShowCancle,
     this.doneClicked,
+    this.title,
+    this.negative,
+    this.positive
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    double width = ScreenUtils.screenW(context) - ScreenUtils.getScaleW(context, 60);
     double rasius = 10.0;
 
     Widget titleImgWidget = Container(
-      width: width,
-      height: ScreenUtils.getScaleW(context, 44),
-      padding: EdgeInsets.all(0),
-      margin: EdgeInsets.all(0),
+      height: 44.w,
       decoration: new BoxDecoration(
         color: GlobalConfig.bluefontColor,
         borderRadius: BorderRadius.only(topLeft: Radius.circular(rasius), topRight: Radius.circular(rasius),)
       ),
       child: Center(
-        child: Text('提示',style: TextStyle(color: Colors.white,fontSize: 32.sp),),
+        child: Text(title,style: TextStyle(color: Colors.white,fontSize: 20.sp),),
       ),
     );
 
     Widget contentWidget = Container(
-      margin: EdgeInsets.only(top: 0),
-      width: width,
       padding: EdgeInsets.only(left: 20, right: 20, bottom: 20),
       decoration: new BoxDecoration(
         color: Colors.white,
-        border: new Border.all(width: 0, color: Colors.white),
       ),
       child: Center(
         child: Text(
           content,
           style: (TextStyle(
-            fontSize: 30.sp,
+            fontSize: 16.sp,
             fontWeight: FontWeight.w400,
             color: Color.fromRGBO(102, 102, 102, 1),
           )),
@@ -86,9 +94,9 @@ class CommonDialog extends Dialog {
           },
           child: Container(
             child: Text(
-              '确定',
+              positive,
               textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 16.0, color: GlobalConfig.bluefontColor),
+              style: TextStyle(fontSize: 16.sp, color: GlobalConfig.bluefontColor),
             ),
           ),
         ),
@@ -113,9 +121,9 @@ class CommonDialog extends Dialog {
               },
               child: Container(
                 child: Text(
-                  '取消',
+                  negative,
                   textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 16.0, color: Color.fromRGBO(153, 153, 153, 1)),
+                  style: TextStyle(fontSize: 16.sp, color: Color.fromRGBO(153, 153, 153, 1)),
                 ),
               ),
             ),
@@ -132,11 +140,8 @@ class CommonDialog extends Dialog {
           ),
         ),
       ),
-      height: 44,
-      width: width,
-      child: Row(
-        children: btnList,
-      ),
+      height: 54.h,
+      child: Row(children: btnList,),
     );
 
     return WillPopScope(
@@ -149,8 +154,7 @@ class CommonDialog extends Dialog {
             color: Colors.transparent,
             border: new Border.all(width: 0, color: Colors.transparent),
           ),
-          width: width,
-          padding: EdgeInsets.all(0),
+          padding: EdgeInsets.only(left: 20.w,right: 20.w),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             mainAxisAlignment: MainAxisAlignment.start,

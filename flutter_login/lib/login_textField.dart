@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutterbase/util/screen_utils.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 typedef void LoginTextFieldCallBack(String content);
 
@@ -56,7 +56,7 @@ class _LoginTextFieldState extends State<LoginTextField> {
       decoration: InputDecoration(
         icon: ImageIcon(
           AssetImage(widget.iconStr),
-          size: ScreenUtils.getScaleW(context, 25),
+          size: 25.w,
         ),
 
         hintText: widget.hintText,
@@ -73,12 +73,8 @@ class _LoginTextFieldState extends State<LoginTextField> {
         ),
 
         suffixIcon: Container(
-          width: ScreenUtils.getScaleW(
-              context,
-              widget.inputText.isEmpty
-                  ? ScreenUtils.getScaleW(context, 18)
-                  : ScreenUtils.getScaleW(context, 60)),
-          height: ScreenUtils.getScaleW(context, 20),
+          width: widget.inputText.isEmpty ? 18.w : 60.w,
+          height: 20.w,
           padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
           child: Row(
             mainAxisSize: MainAxisSize.min,
@@ -89,8 +85,8 @@ class _LoginTextFieldState extends State<LoginTextField> {
                         padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
                         icon: Image.asset(
                           'images/clearBtn.png',
-                          width: ScreenUtils.getScaleW(context, 18),
-                          height: ScreenUtils.getScaleW(context, 18),
+                          width: 18.w,
+                          height: 18.w,
                           fit: BoxFit.fill,
                         ),
                         onPressed: () {
@@ -102,8 +98,8 @@ class _LoginTextFieldState extends State<LoginTextField> {
                       ),
                     )
                   : Container(
-                      width: ScreenUtils.getScaleW(context, 18),
-                      height: ScreenUtils.getScaleW(context, 18),
+                      width: 18.w,
+                      height: 18.w,
                     ),
               widget.hasShowPasswordIcon
                   ? Expanded(
@@ -113,8 +109,8 @@ class _LoginTextFieldState extends State<LoginTextField> {
                           widget.hiddenPassword
                               ? 'images/hiddenPassword.png'
                               : 'images/lookPassword.png',
-                          width: ScreenUtils.getScaleW(context, 20),
-                          height: ScreenUtils.getScaleW(context, 12),
+                          width: 20.w,
+                          height: 12.w,
                           fit: BoxFit.fill,
                         ),
                         onPressed: () {
@@ -125,8 +121,8 @@ class _LoginTextFieldState extends State<LoginTextField> {
                       ),
                     )
                   : Container(
-                      width: ScreenUtils.getScaleW(context, 0),
-                      height: ScreenUtils.getScaleW(context, 0),
+                      width: 0.w,
+                      height: 0.w,
                     ),
             ],
           ),

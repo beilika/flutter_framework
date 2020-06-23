@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 // ignore: must_be_immutable
 class LoadingDialog extends Dialog {
@@ -12,8 +13,8 @@ class LoadingDialog extends Dialog {
       type: MaterialType.transparency, //透明类型
       child: new Center( //保证控件居中效果
         child: new SizedBox(
-          width: 120.0,
-          height: 120.0,
+          width: 120.w,
+          height: 120.w,
           child: new Container(
             decoration: ShapeDecoration(
               color: Color(0xffffffff),
@@ -34,7 +35,7 @@ class LoadingDialog extends Dialog {
                   ),
                   child: new Text(
                     text,
-                    style: new TextStyle(fontSize: 12.0),
+                    style: new TextStyle(fontSize: 12.sp),
                   ),
                 ),
               ],

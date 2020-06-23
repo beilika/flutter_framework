@@ -57,7 +57,7 @@ class _HomePageState extends State<HomePage> {
     //设置字体大小根据系统的“字体大小”辅助选项来进行缩放,默认为false
 //    ScreenUtil.init(allowFontScaling: true);
   //默认是1920*1080大小
-    ScreenUtil.init(width: 750,height: 1334);
+    ScreenUtil.init(width: 375.0,height: 812.0);
     //Scaffold 实现了基本的 Material Design 布局结构
     return Scaffold(
       //Stack 层叠组件，前面的元素在上面，后面的元素在下面

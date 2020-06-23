@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutterbase/base_exp.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 typedef void APPUpdateDialogUpdateCallBack();
 
@@ -17,7 +18,7 @@ class APPUpdateDialog extends Dialog {
 
   @override
   Widget build(BuildContext context) {
-    double width = ScreenUtils.screenW(context) - ScreenUtils.getScaleW(context, 112);
+    double width = ScreenUtil.screenWidth - 112.w;
 
     Widget titleImgWidget = Container(
       width: width,
@@ -118,7 +119,7 @@ class APPUpdateDialog extends Dialog {
         ),
       ),
       height: 44,
-      width: ScreenUtils.screenW(context) - 60,
+      width: ScreenUtil.screenWidth - 60.w,
       child: Row(
         children: btnList,
       ),

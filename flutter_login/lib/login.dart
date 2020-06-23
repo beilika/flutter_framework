@@ -55,22 +55,22 @@ class _LoginState extends State<Login> with SingleTickerProviderStateMixin,Autom
       child: Text(
         '你好,欢迎来到',
         style: TextStyle(
-            color: Colors.black, fontSize: 40.sp, fontWeight: FontWeight.w200),
+            color: Colors.black, fontSize: 26.sp, fontWeight: FontWeight.w200),
       ),
-      width: ScreenUtils.screenW(context) - ScreenUtils.getScaleW(context, 70),
-      height: 66.w,
+      width: ScreenUtil.screenWidth - 70.w,
+      height: 46.w,
       margin: EdgeInsets.only(top: 30.w,),
     );
 
     Widget title2Widget = Container(
       child: Text(
         '强大的\nflutter开发框架',
-        style: TextStyle(color: Colors.black, fontSize: 56.sp, fontWeight: FontWeight.w400),
+        style: TextStyle(color: Colors.black, fontSize: 28.sp, fontWeight: FontWeight.w400),
         maxLines: 2,
       ),
-      width: ScreenUtils.screenW(context) - ScreenUtils.getScaleW(context, 70),
+      width: ScreenUtil.screenWidth - 70.w,
       margin: EdgeInsets.only(
-        top: ScreenUtils.getScaleW(context, 20),
+        top: 20,
       ),
     );
 
@@ -85,9 +85,9 @@ class _LoginState extends State<Login> with SingleTickerProviderStateMixin,Autom
           _accountStr = content;
         },
       ),
-      width: ScreenUtils.screenW(context) - ScreenUtils.getScaleW(context, 70),
+      width: ScreenUtil.screenWidth - 70.w,
       margin: EdgeInsets.only(
-        top: ScreenUtils.getScaleW(context, 60),
+        top: 60,
       ),
     );
 
@@ -109,27 +109,26 @@ class _LoginState extends State<Login> with SingleTickerProviderStateMixin,Autom
           });
         },
       ),
-      width: ScreenUtils.screenW(context) - ScreenUtils.getScaleW(context, 70),
+      width: ScreenUtil.screenWidth - 70.w,
       margin: EdgeInsets.only(
-        top: ScreenUtils.getScaleW(context, 10),
+        top: 10,
       ),
     );
 
     Widget loginBtnWidget = Container(
-      width: ScreenUtils.screenW(context) - ScreenUtils.getScaleW(context, 70),
-      height: ScreenUtils.getScaleW(context, 44),
+      width: ScreenUtil.screenWidth - 70.w,
+      height: 44.h,
       margin: EdgeInsets.only(
-        top: ScreenUtils.getScaleW(context, 30),
+        top: 30,
       ),
       child: RaisedButton(
         child: Text('登录',
-            style: TextStyle(fontSize: 40.sp, fontWeight: FontWeight.w400)),
+            style: TextStyle(fontSize: 14.sp, fontWeight: FontWeight.w400)),
         color: GlobalConfig.bluefontColor,
         textColor: Colors.white,
         elevation: 0,
         shape: RoundedRectangleBorder(
-          borderRadius:
-          BorderRadius.circular(ScreenUtils.getScaleW(context, 22)),
+          borderRadius: BorderRadius.circular(22),
         ),
         onPressed: () {
           if (_accountStr.length == 0) {
@@ -149,10 +148,10 @@ class _LoginState extends State<Login> with SingleTickerProviderStateMixin,Autom
 
     //自动登录和记住密码
     Widget stateBtnWidget = Container(
-      width: ScreenUtils.screenW(context) - ScreenUtils.getScaleW(context, 70),
-      height: ScreenUtils.getScaleW(context, 20),
+      width: ScreenUtil.screenWidth - 70.w,
+      height: 20.h,
       margin: EdgeInsets.only(
-        top: ScreenUtils.getScaleW(context, 15),
+        top: 15,
       ),
       child: LoginStateTool(
           autoLoginBtnSelected: _autoLoginBtnSelected,
@@ -174,7 +173,7 @@ class _LoginState extends State<Login> with SingleTickerProviderStateMixin,Autom
               FocusScope.of(context).requestFocus(FocusNode());
             },
             child: Container(
-              margin: const EdgeInsets.only(top: 30.0),
+              margin: const EdgeInsets.only(top: 10.0),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: <Widget>[
@@ -192,9 +191,9 @@ class _LoginState extends State<Login> with SingleTickerProviderStateMixin,Autom
                   fit: BoxFit.fill,
                 ),
               ),
-              padding: EdgeInsets.all(ScreenUtil().setWidth(80.0)),
-              width: ScreenUtils.screenW(context),
-              height: ScreenUtils.screenH(context),
+              padding: EdgeInsets.all(40.h),
+              width: ScreenUtil.screenWidth,
+              height: ScreenUtil.screenHeight,
             ),
           ),
         ),);

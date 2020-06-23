@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutterbase/util/screen_utils.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 typedef void LoginStateToolCallBack(bool autoLoginBtnSelected,bool rememberPasswordBtnSelected);
@@ -117,7 +116,7 @@ class _LoginStateButtonState extends State<LoginStateButton> {
         color: Colors.white,
         label: Text(widget.buttonTitle,
             style: TextStyle(
-                fontSize: 26.sp, color: Color.fromRGBO(170, 170, 170, 1.0))),
+                fontSize: 13.sp, color: Color.fromRGBO(170, 170, 170, 1.0))),
 
         onPressed: () {
             widget.selected = !widget.selected;

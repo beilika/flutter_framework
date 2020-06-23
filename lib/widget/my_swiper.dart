@@ -11,7 +11,7 @@ class MySwiper extends StatelessWidget {
   Widget build(BuildContext context) {
     //导航栏 Opacity包裹，可以改变组件透明度
     return Container(
-      height: ScreenUtil().setHeight(450),
+      height: ScreenUtil().setHeight(250),
       //Swiper 轮播图组件
       child: Swiper(
         itemCount: imageUrls.length, // 条目个数
