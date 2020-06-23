@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter_framework/model/app_update_entity.dart';
-import 'package:flutterbase/base_exp.dart';
-import 'package:ota_update/ota_update.dart';
+import 'package:flutterbase/util/global_config.dart';
+import 'package:flutterbase/util/my_toast.dart';
+import 'package:flutterbase/util/screen_utils.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:ota_update/ota_update.dart';
+
+import 'model/app_update_entity.dart';
 
 String apkName = '测试.apk';
 

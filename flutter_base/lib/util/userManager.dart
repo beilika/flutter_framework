@@ -1,4 +1,5 @@
-import 'package:flutter_framework/model/app_update_entity.dart';
+
+import 'package:flutterbase/update/model/app_update_entity.dart';
 
 class UserManager {
   UserModelEntity _userModel;

@@ -41,11 +41,15 @@ class _LoginState extends State<Login> with SingleTickerProviderStateMixin,Autom
   @override
   void initState() {
     super.initState();
+    //初始化状态数据
     getStateData();
   }
   @override
   Widget build(BuildContext context) {
     _context = context;
+
+    //检查更新
+    CheckUpdateUtil(context).getAppVersion();
 
     Widget title1Widget = Container(
       child: Text(
@@ -170,6 +174,7 @@ class _LoginState extends State<Login> with SingleTickerProviderStateMixin,Autom
               FocusScope.of(context).requestFocus(FocusNode());
             },
             child: Container(
+              margin: const EdgeInsets.only(top: 30.0),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: <Widget>[

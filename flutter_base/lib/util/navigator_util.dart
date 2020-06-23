@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_framework/router/customer_route.dart';
+import 'package:flutterbase/router/customer_route.dart';
 
 class NavigatorUtil {
   ///跳转到指定页面

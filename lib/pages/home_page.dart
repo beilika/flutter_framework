@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_framework/util/navigator_util.dart';
+import 'file:///E:/study/flutter/flutter_framework/flutter_base/lib/util/navigator_util.dart';
 import 'package:flutter_framework/widget/my_app_bar.dart';
 import 'package:flutter_framework/widget/drawer/my_drawer.dart';
 import 'package:flutter_framework/widget/my_swiper.dart';

@@ -1,16 +1,16 @@
 import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_framework/model/app_update_entity.dart';
-import 'package:flutter_framework/network/api.dart';
-import 'package:flutter_framework/network/httpManager.dart';
-import 'package:flutter_framework/util/navigator_util.dart';
-import 'package:flutter_framework/util/userManager.dart';
+import 'package:flutterbase/network/api.dart';
+import 'package:flutterbase/network/httpManager.dart';
+import 'package:flutterbase/util/navigator_util.dart';
+import 'package:flutterbase/util/userManager.dart';
 import 'package:package_info/package_info.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import 'app_update_diolog.dart';
 import 'app_update_page.dart';
+import 'model/app_update_entity.dart';
 
 /// @author 强周亮(qiangzhouliang)
 
