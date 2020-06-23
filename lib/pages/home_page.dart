@@ -6,6 +6,7 @@ import 'package:flutter_framework/widget/drawer/my_drawer.dart';
 import 'package:flutter_framework/widget/my_swiper.dart';
 import 'package:flutter_framework/widget/warp_demo.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_splash_screen/flutter_splash_screen.dart';
 import 'package:flutterlogin/login.dart';
 //滚动的最大值,阈值
 const APPBAR_SCROLL_OFFSET = 100;
@@ -37,7 +38,9 @@ class _HomePageState extends State<HomePage> {
           },
         )
     );
+    hideScreen();
   }
+
   @override
   Widget build(BuildContext context) {
     //设置字体大小根据系统的“字体大小”辅助选项来进行缩放,默认为false
@@ -88,7 +91,12 @@ class _HomePageState extends State<HomePage> {
       drawer: MyDrawer(),
     );
   }
-
+  ///延迟隐藏闪屏页
+  Future<void> hideScreen() async {
+    Future.delayed(Duration(milliseconds: 600), () {
+      FlutterSplashScreen.hide();
+    });
+  }
   //滚动处理操作
   _onScroll(offset){
     double alpha = offset / APPBAR_SCROLL_OFFSET;

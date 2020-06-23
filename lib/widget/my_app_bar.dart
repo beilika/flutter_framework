@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterbase/util/global_config.dart';
 
 class MyAppBar extends StatelessWidget {
   //appbar透明度
@@ -17,7 +18,7 @@ class MyAppBar extends StatelessWidget {
       child: Container(
         height: 80,
         //decoration 装饰器, 背景色为白色
-        decoration: BoxDecoration(color: Colors.white,),
+        decoration: BoxDecoration(color: GlobalConfig.bluefontColor,),
         child: Row(
           children: <Widget>[
             //判断是否显示，调出左边抽屉按钮
