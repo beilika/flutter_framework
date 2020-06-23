@@ -29,6 +29,9 @@ dev_dependencies:
 
   #ios应用更新跳转APP STORE
   url_launcher: "^5.4.5"
+  # 动态权限申请
+  permission_handler: ^5.0.1
+
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

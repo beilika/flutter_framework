@@ -1,13 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'file:///E:/study/flutter/flutter_framework/flutter_base/lib/util/navigator_util.dart';
 import 'package:flutter_framework/widget/my_app_bar.dart';
 import 'package:flutter_framework/widget/drawer/my_drawer.dart';
 import 'package:flutter_framework/widget/my_swiper.dart';
 import 'package:flutter_framework/widget/warp_demo.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_splash_screen/flutter_splash_screen.dart';
+import 'package:flutterbase/base_exp.dart';
 import 'package:flutterlogin/login.dart';
+import 'package:permission_handler/permission_handler.dart';
 //滚动的最大值,阈值
 const APPBAR_SCROLL_OFFSET = 100;
 //appbar透明度
@@ -30,14 +31,24 @@ class _HomePageState extends State<HomePage> {
   @override
   void initState() {
     super.initState();
-    list..add(
-        ListTile(
+    list..add(ListTile(
           title: Text('点击跳转登录'),
           onTap: (){
             NavigatorUtil.pushRightBack(context, Login());
           },
-        )
-    );
+        ))..add(ListTile(
+      title: Text('动态权限获取'),
+      onTap: (){
+        CommonDialog.show(context,"在使用XXX11功能前，您先需要授予一下权限，否则，将无法使用该功能！",doneClicked: (){
+          PermissionUtil(success: (){
+            print('success');
+          },fail: (){
+            print('fail');
+          }).requestPermission([Permission.storage,Permission.camera]);
+
+        });
+      },
+    ));
     hideScreen();
   }
 
