@@ -42,8 +42,6 @@ class _HomePageState extends State<HomePage> {
         CommonDialog.show(context,"在使用XXX11功能前，您先需要授予一下权限，否则，将无法使用该功能！",doneClicked: (){
           PermissionUtil(success: (){
             print('success');
-          },fail: (){
-            print('fail');
           }).requestPermission([Permission.storage,Permission.camera]);
 
         });
