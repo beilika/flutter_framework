@@ -3,8 +3,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_framework/model/app_update_entity.dart';
 import 'package:flutterbase/base_exp.dart';
 import 'package:ota_update/ota_update.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-String apkName = '大后端综合管理系统.apk';
+String apkName = '测试.apk';
 
 class AppUpdatePage extends StatefulWidget {
   final AppUpdateEntity appUpdateEntity;
@@ -29,7 +30,7 @@ class _AppUpdatePageState extends State<AppUpdatePage> {
   }
   downloadAndroidApp(String url) {
     try {
-      OtaUpdate().execute(url, destinationFilename: '大后端综合管理系统.apk').listen(
+      OtaUpdate().execute(url, destinationFilename: '测试.apk').listen(
         (OtaEvent event) {
           print('status:${event.status},value:${event.value}');
           switch (event.status) {
@@ -73,9 +74,9 @@ class _AppUpdatePageState extends State<AppUpdatePage> {
     );
 
     Widget version = Text(
-      '版本号:v2.0.0',
+      '版本号：v${widget.appUpdateEntity?.version == null ? '': widget.appUpdateEntity.version}',
       style: (TextStyle(
-        fontSize: 16.0,
+        fontSize: 32.sp,
         fontWeight: FontWeight.w400,
         color: Color.fromRGBO(102, 102, 102, 1),
       )),
@@ -109,10 +110,7 @@ class _AppUpdatePageState extends State<AppUpdatePage> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text(
-            '版本升级',
-            style: GlobalConfig.navTextStyle,
-          ),
+          title: Text('版本升级', style: GlobalConfig.navTextStyle,),
           centerTitle: true,
           backgroundColor: Colors.white,
           brightness: Brightness.light,

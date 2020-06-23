@@ -67,7 +67,10 @@ class CheckUpdateUtil {
                           needForcedUpdating: entity.needForcedUpdating.compareTo('1') == 0,
                           doneClicked: () {
                             if (Platform.isAndroid) {
-                              gotoAndroidDownloadPage(entity.androidUrl);
+                              //测试下载应用地址
+                              var testUrl = "http://60.164.243.234:20101/api/file/downloadApk?fileUrl=APK/2020-06-19/lzshzz_release_1002.apk&downloadOrUpdate=02";
+                              gotoAndroidDownloadPage(testUrl);
+//                              gotoAndroidDownloadPage(entity.androidUrl);
                             } else {
                               gotoAppStore(entity.iosUrl);
                             }
@@ -84,9 +87,9 @@ class CheckUpdateUtil {
   }
   //检查更新
   void checkUpdate() {
-//    getAppVersion();
+    getAppVersion();
 
-    if (UserManager().appVersion().compareTo(UserManager().lastestVersion()) == 0) {
+    /*if (UserManager().appVersion().compareTo(UserManager().lastestVersion()) == 0) {
       //已经是最新版本
       _showLatestVersionDialog();
     } else {
@@ -108,7 +111,7 @@ class CheckUpdateUtil {
             },
           );
         });
-    }
+    }*/
   }
 
   void _showLatestVersionDialog() {

@@ -25,7 +25,7 @@ dependencies:
   #ios应用更新跳转APP STORE
   url_launcher: ^5.4.5
   #android应用内更新
-  ota_update: ^2.2.1
+  ota_update: ^2.3.0
 
   #数据持久化
   shared_preferences: "^0.4.2"
