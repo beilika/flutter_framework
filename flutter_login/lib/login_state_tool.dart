@@ -109,15 +109,15 @@ class _LoginStateButtonState extends State<LoginStateButton> {
     return RaisedButton.icon(
         icon: Image.asset(
           widget.selected?'images/loginStateBtn_selected.png':'images/loginStateBtn_unselected.png',
-          width: ScreenUtil().setWidth(48),
-          height: ScreenUtil().setHeight(48),
+          width: 32.w,
+          height: 32.h,
           fit: BoxFit.contain,
         ),
         elevation:0,
         color: Colors.white,
         label: Text(widget.buttonTitle,
             style: TextStyle(
-                fontSize: ScreenUtil().setSp(39.0), color: Color.fromRGBO(170, 170, 170, 1.0))),
+                fontSize: 26.sp, color: Color.fromRGBO(170, 170, 170, 1.0))),
 
         onPressed: () {
             widget.selected = !widget.selected;

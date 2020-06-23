@@ -43,12 +43,6 @@ class _LoginState extends State<Login> with SingleTickerProviderStateMixin,Autom
     super.initState();
     getStateData();
   }
-
-  //手机号的控制器
-  TextEditingController phoneController = TextEditingController();
-
-  //密码的控制器
-  TextEditingController passController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     _context = context;
@@ -57,19 +51,17 @@ class _LoginState extends State<Login> with SingleTickerProviderStateMixin,Autom
       child: Text(
         '你好,欢迎来到',
         style: TextStyle(
-            color: Colors.black, fontSize: ScreenUtil().setSp(80.0), fontWeight: FontWeight.w200),
+            color: Colors.black, fontSize: 40.sp, fontWeight: FontWeight.w200),
       ),
       width: ScreenUtils.screenW(context) - ScreenUtils.getScaleW(context, 70),
-      height: ScreenUtils.getScaleW(context, 46),
-      margin: EdgeInsets.only(
-        top: ScreenUtils.getScaleW(context, 30),
-      ),
+      height: 66.w,
+      margin: EdgeInsets.only(top: 30.w,),
     );
 
     Widget title2Widget = Container(
       child: Text(
-        '强哥\nflutter开发框架',
-        style: TextStyle(color: Colors.black, fontSize: ScreenUtil().setSp(84.0), fontWeight: FontWeight.w400),
+        '强大的\nflutter开发框架',
+        style: TextStyle(color: Colors.black, fontSize: 56.sp, fontWeight: FontWeight.w400),
         maxLines: 2,
       ),
       width: ScreenUtils.screenW(context) - ScreenUtils.getScaleW(context, 70),
@@ -127,7 +119,7 @@ class _LoginState extends State<Login> with SingleTickerProviderStateMixin,Autom
       ),
       child: RaisedButton(
         child: Text('登录',
-            style: TextStyle(fontSize: ScreenUtil().setSp(60.0), fontWeight: FontWeight.w400)),
+            style: TextStyle(fontSize: 40.sp, fontWeight: FontWeight.w400)),
         color: GlobalConfig.bluefontColor,
         textColor: Colors.white,
         elevation: 0,
@@ -195,7 +187,7 @@ class _LoginState extends State<Login> with SingleTickerProviderStateMixin,Autom
                   fit: BoxFit.fill,
                 ),
               ),
-              padding: EdgeInsets.all(ScreenUtil().setWidth(105.0)),
+              padding: EdgeInsets.all(ScreenUtil().setWidth(80.0)),
               width: ScreenUtils.screenW(context),
               height: ScreenUtils.screenH(context),
             ),
