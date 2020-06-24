@@ -7,6 +7,19 @@ class GlobalConfig {
 
   static Color bluefontColor = Color.fromRGBO(38,154,243, 1.0);
 
+  //自定义标题色
+  static MaterialColor themeColor = const MaterialColor(
+    0xFF269af3,
+    const <int, Color>{
+      50: const Color.fromRGBO(38,154,243, 1.0),
+      100: const Color.fromRGBO(38,154,243, 1.0),
+      200: const Color.fromRGBO(38,154,243, 1.0),
+      300: const Color.fromRGBO(38,154,243, 1.0),
+      400: const Color.fromRGBO(38,154,243, 1.0),
+      500: const Color.fromRGBO(38,154,243, 1.0),
+    },
+  );
+
   //路由
   static final String routingLogin = '/router/login_Page';
 

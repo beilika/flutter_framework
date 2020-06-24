@@ -17,3 +17,5 @@ export 'dialog/loadingDialog.dart';
 export 'dialog/common_diolog.dart';
 
 export 'common/line_widget.dart';
+
+export 'easyrefresh/basic.dart';

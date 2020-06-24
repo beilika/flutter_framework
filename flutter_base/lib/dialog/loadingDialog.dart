@@ -13,7 +13,7 @@ class LoadingDialog extends Dialog {
       type: MaterialType.transparency, //透明类型
       child: new Center( //保证控件居中效果
         child: new SizedBox(
-          width: 120.w,
+          width: 1,
           height: 120.w,
           child: new Container(
             decoration: ShapeDecoration(

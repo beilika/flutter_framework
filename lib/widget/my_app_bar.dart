@@ -4,7 +4,9 @@ import 'package:flutterbase/util/global_config.dart';
 class MyAppBar extends StatelessWidget {
   //appbar透明度
   double appBarAlpha = 0;
+  //是否显示调出左边抽屉的按钮
   bool isShowDrawer = true;
+  //导航栏标题
   String title;//标题
 
   MyAppBar({Key key,this.appBarAlpha,this.isShowDrawer = true,this.title = '首页'}) : super(key: key);

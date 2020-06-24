@@ -13,17 +13,18 @@ class _SearchPageState extends State<SearchPage> {
     //Scaffold 实现了基本的 Material Design 布局结构
     return Scaffold(
         appBar:AppBar(
-            title:Text('SearchBarDemo'),
-            actions:<Widget>[
-              IconButton(
-                  icon:Icon(Icons.search),
-                  onPressed: (){
-                    //调出搜索条
-                    showSearch(context: context, delegate: searchBarDelegate());
-                    print('开始搜索');
-                  }
-              ),
-            ]
+          centerTitle: true,
+          title:Text('SearchBarDemo'),
+          actions:<Widget>[
+            IconButton(
+                icon:Icon(Icons.search),
+                onPressed: (){
+                  //调出搜索条
+                  showSearch(context: context, delegate: searchBarDelegate());
+                  print('开始搜索');
+                }
+            ),
+          ]
         ),
       body: Center(
         child: Text('搜索'),

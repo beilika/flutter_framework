@@ -46,6 +46,11 @@ class _HomePageState extends State<HomePage> {
 
         });
       },
+    ))..add(ListTile(
+      title: Text('下拉刷新，上拉加载更多'),
+      onTap: (){
+        NavigatorUtil.pushRightBack(context, BasicPage('刷新加载'));
+      },
     ));
     hideScreen();
   }

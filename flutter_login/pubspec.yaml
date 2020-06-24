@@ -12,21 +12,12 @@ dependencies:
   flutter:
     sdk: flutter
 
+  flutterbase:
+    path: ../flutter_base
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
-  #flutter 轻提示
-#  fluttertoast: ^4.0.0
-
-  #数据持久化
-  shared_preferences: "^0.4.2"
-  # 屏幕适配组件
-  flutter_screenutil: ^2.1.0
-
-  flutterbase:
-    path: ../flutter_base
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

@@ -19,10 +19,8 @@ class MyApp extends StatelessWidget {
     setScreamDirection(DeviceOrientation.portraitUp);
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.lightBlue,
-      ),
+      title: 'Flutter 开发框架封装',
+//      theme: ThemeData(primarySwatch: Colors.lightBlue,),
         //不带底部+号的底部导航栏
 //      home: TabNavigator(),
     //带底部＋号的底部导航栏
