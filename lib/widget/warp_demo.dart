@@ -22,27 +22,19 @@ class _WarpDemoState extends State<WarpDemo> {
     //得到屏幕的高度和宽度，用来设置Container的宽和高
     final width = MediaQuery.of(context).size.width;
     final height = MediaQuery.of(context).size.height;
-
-
-
-    return Scaffold(
-        appBar: AppBar(
-          title: Text('Wrap流式布局'),
-        ),
-        body:Center(
-          child: Opacity(
-            opacity: 0.8,
-            child: Container(
-              width: width,
-              height: height/2,
-              color: Colors.grey,
-              child: Wrap(    //流式布局，
-                children: list,
-                spacing: 26.0,  //设置间距
-              ),
-            ),
+    return Center(
+      child: Opacity(
+        opacity: 0.8,
+        child: Container(
+          width: width,
+          height: height/2,
+          color: Colors.grey,
+          child: Wrap(    //流式布局，
+            children: list,
+            spacing: 26.0,  //设置间距
           ),
-        )
+        ),
+      ),
     );
   }
 

@@ -45,7 +45,7 @@ class _AppUpdatePageState extends State<AppUpdatePage> {
               _text = '安装中';
               break;
             case OtaStatus.PERMISSION_NOT_GRANTED_ERROR: // 权限错误
-              MyToast.toast(context, msg: "更新失败，请稍后再试 ", position: ToastPostion.center);
+              MyToast.toast(msg: "更新失败，请稍后再试 ");
               setState(() {
                 _text = '下载失败';
                 _progress = 0;
@@ -57,7 +57,7 @@ class _AppUpdatePageState extends State<AppUpdatePage> {
         },
       );
     } catch (e) {
-      MyToast.toast(context, msg: "更新失败，请稍后再试 ", position: ToastPostion.center);
+      MyToast.toast(msg: "更新失败，请稍后再试 ");
       setState(() {
         _text = '下载失败';
         _progress = 0;

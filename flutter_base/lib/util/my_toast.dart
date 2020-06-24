@@ -9,6 +9,7 @@ enum ToastPostion {
 }
 
 class MyToast {
+  static BuildContext _context;
   // toast靠它加到屏幕上
   static OverlayEntry _overlayEntry;
   // toast是否正在showing
@@ -31,10 +32,12 @@ class MyToast {
   static double _pdHorizontal;
   // 上下边距
   static double _pdVertical;
-  static void toast(
-      BuildContext context, {
+  static void init(BuildContext context){
+    _context = context;
+  }
+  static void toast({
         //显示的文本
-        String msg,
+        @required String msg,
         //显示的时间 单位毫秒
         int showTime = 1200,
         //显示的背景
@@ -61,7 +64,7 @@ class MyToast {
     _pdHorizontal = pdHorizontal;
     _pdVertical = pdVertical;
     //获取OverlayState
-    OverlayState overlayState = Overlay.of(context);
+    OverlayState overlayState = Overlay.of(_context);
     _showing = true;
     if (_overlayEntry == null) {
       //OverlayEntry负责构建布局

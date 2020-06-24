@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterbase/base_exp.dart';
 
 /*旅拍*/
 class TravelPage extends StatefulWidget {
@@ -27,17 +28,16 @@ class _TravelPageState extends State<TravelPage> with SingleTickerProviderStateM
   Widget build(BuildContext context) {
     //Scaffold 实现了基本的 Material Design 布局结构
     return Scaffold(
-        appBar:AppBar(
-            title:Text('旅拍'),
-            bottom:TabBar(
-              controller: _controller,
-              tabs:[
-                Tab(icon:Icon(Icons.directions_car)),
-                Tab(icon:Icon(Icons.directions_transit)),
-                Tab(icon:Icon(Icons.directions_bike)),
-              ],
-            )
-        ),
+        appBar:myAppBar(context, '旅拍',tabBar: TabBar(
+          labelColor: GlobalConfig.bluefontColor,
+          unselectedLabelColor: Colors.grey,
+          controller: _controller,
+          tabs:[
+            Tab(icon:Icon(Icons.directions_car)),
+            Tab(icon:Icon(Icons.directions_transit)),
+            Tab(icon:Icon(Icons.directions_bike)),
+          ],
+        )),
         body:TabBarView(
           controller: _controller,
           children: <Widget>[

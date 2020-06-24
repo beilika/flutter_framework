@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_framework/pages/travel_page.dart';
 import 'package:flutter_framework/widget/my_app_bar.dart';
 import 'package:flutter_framework/widget/drawer/my_drawer.dart';
 import 'package:flutter_framework/widget/my_swiper.dart';
@@ -51,16 +52,19 @@ class _HomePageState extends State<HomePage> {
       onTap: (){
         NavigatorUtil.pushRightBack(context, BasicPage('刷新加载'));
       },
+    ))..add(ListTile(
+      title: Text('顶部标题栏滑动效果'),
+      onTap: (){
+        NavigatorUtil.pushRightBack(context, TravelPage());
+      },
     ));
     hideScreen();
   }
 
   @override
   Widget build(BuildContext context) {
-    //设置字体大小根据系统的“字体大小”辅助选项来进行缩放,默认为false
-//    ScreenUtil.init(allowFontScaling: true);
-  //默认是1920*1080大小
-    ScreenUtil.init(width: 375.0,height: 812.0);
+
+    App.initApp(context);
     //Scaffold 实现了基本的 Material Design 布局结构
     return Scaffold(
       //Stack 层叠组件，前面的元素在上面，后面的元素在下面

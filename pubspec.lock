@@ -115,7 +115,7 @@ packages:
     source: path
     version: "0.0.1"
   http:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: http
       url: "https://pub.flutter-io.cn"

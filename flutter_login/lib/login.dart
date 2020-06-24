@@ -132,12 +132,12 @@ class _LoginState extends State<Login> with SingleTickerProviderStateMixin,Autom
         ),
         onPressed: () {
           if (_accountStr.length == 0) {
-            MyToast.toast(context, msg: "请输入账号 ", position: ToastPostion.center);
+            MyToast.toast(msg: "请输入账号 ", position: ToastPostion.center);
             return;
           }
 
           if (_passwordStr.length == 0) {
-            MyToast.toast(context, msg: "请输入密码 ", position: ToastPostion.center);
+            MyToast.toast(msg: "请输入密码 ", position: ToastPostion.center);
             return;
           }
 
