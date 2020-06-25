@@ -38,6 +38,8 @@ dependencies:
 #  auto_orientation: ^0.0.2
   # 屏幕横屏插件
   orientation: ^1.2.0
+  # 文件选择
+  file_picker: ^1.12.0
 
 dev_dependencies:
   flutter_test:
