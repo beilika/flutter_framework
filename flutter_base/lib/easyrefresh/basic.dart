@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_easyrefresh/easy_refresh.dart';
+import 'package:flutterbase/common/my_app_bar.dart';
 
 import 'footer.dart';
 import 'header.dart';
@@ -10,9 +11,7 @@ import 'header.dart';
 class BasicPage extends StatefulWidget {
   /// 标题
   final String title;
-
   const BasicPage(this.title, {Key key}) : super(key: key);
-
   @override
   _BasicPageState createState() => _BasicPageState();
 }
@@ -41,10 +40,7 @@ class _BasicPageState extends State<BasicPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-        backgroundColor: Colors.blue,
-      ),
+      appBar: myAppBar(context, widget.title),
       body: Center(
         child: Container(
           height: _direction == Axis.vertical ? double.infinity : 210.0,
@@ -94,43 +90,6 @@ class _BasicPageState extends State<BasicPage> {
           ),
         ),
       ),
-      persistentFooterButtons: <Widget>[
-        _enableControlFinish
-            ? FlatButton(
-                onPressed: () {
-                  _controller.resetLoadState();
-                  _controller.finishRefresh();
-                },
-                child: Text('完成刷新',
-                    style: TextStyle(color: Colors.black)))
-            : SizedBox(
-                width: 0.0,
-                height: 0.0,
-              ),
-        _enableControlFinish
-            ? FlatButton(
-                onPressed: () {
-                  _controller.finishLoad(noMore: _count >= 80);
-                },
-                child: Text('完成加载',
-                    style: TextStyle(color: Colors.black)))
-            : SizedBox(
-                width: 0.0,
-                height: 0.0,
-              ),
-        FlatButton(
-            onPressed: () {
-              _controller.callRefresh();
-            },
-            child: Text('刷新',
-                style: TextStyle(color: Colors.black))),
-        FlatButton(
-            onPressed: () {
-              _controller.callLoad();
-            },
-            child: Text('加载更多',
-                style: TextStyle(color: Colors.black))),
-      ],
     );
   }
 }

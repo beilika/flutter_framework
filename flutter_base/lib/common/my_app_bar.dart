@@ -39,10 +39,10 @@ Widget myAppBar(context,title,
         );
       },
     ) : null,
-    bottom:PreferredSize(
+    bottom: tabBar != null ? PreferredSize(
       preferredSize: Size.fromHeight(60.h),
       child: Material(color: Colors.white, child: tabBar,),
-    ),
+    ) : null,
     //内容居中
     centerTitle: true,
     //标题

@@ -20,7 +20,6 @@ export 'dialog/common_diolog.dart';
 
 export 'common/line_widget.dart';
 export 'common/my_app_bar.dart';
-export 'common/custom_tab_bar.dart';
 
 export 'easyrefresh/basic.dart';
 export 'easyrefresh/header.dart';
