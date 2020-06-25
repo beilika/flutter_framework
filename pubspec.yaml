@@ -14,6 +14,7 @@ dependencies:
   flutter_swiper : ^1.1.6
 #  启动页制作
   flutter_splash_screen: ^0.1.0
+
   flutterlogin:
     path: ./flutter_login
   flutterbase:

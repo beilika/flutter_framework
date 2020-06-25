@@ -32,6 +32,13 @@ dependencies:
   # webView加载网页框架
   flutter_webview_plugin: ^0.3.11
 
+  #  视频
+  chewie: ^0.9.10
+#  video_player: ^0.10.0+2
+#  auto_orientation: ^0.0.2
+  # 屏幕横屏插件
+  orientation: ^1.2.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

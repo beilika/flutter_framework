@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutterbase/util/my_toast.dart';
+import 'package:orientation/orientation.dart';
 
 /// @author 强周亮(qiangzhouliang)
 /// @desc app 公共的一些操作，如页面初始化等
@@ -18,10 +19,7 @@ class App {
     ScreenUtil.init(width: 375.0,height: 812.0);
 
     /// 设置屏幕方向
-    /// DeviceOrientation.portraitUp, //只能纵向
-    /// DeviceOrientation.portraitDown,//只能纵向
-    SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
-
+    setOrientationUp();
     //初始化toast轻提示
     MyToast.init(context);
   }
@@ -36,5 +34,13 @@ class App {
       );
       SystemChrome.setSystemUIOverlayStyle(systemUiOverlayStyle);
     }
+  }
+
+  //设置屏幕竖屏
+  static setOrientationUp(){
+    /// DeviceOrientation.portraitUp, //只能纵向
+    /// DeviceOrientation.portraitDown,//只能纵向
+//    SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
+    OrientationPlugin.forceOrientation(DeviceOrientation.portraitUp);
   }
 }

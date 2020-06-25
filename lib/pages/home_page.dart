@@ -1,15 +1,18 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_framework/pages/travel_page.dart';
 import 'package:flutter_framework/widget/my_app_bar.dart';
 import 'package:flutter_framework/widget/drawer/my_drawer.dart';
 import 'package:flutter_framework/widget/my_swiper.dart';
-import 'package:flutter_framework/widget/warp_demo.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_splash_screen/flutter_splash_screen.dart';
 import 'package:flutterbase/base_exp.dart';
 import 'package:flutterlogin/login.dart';
 import 'package:permission_handler/permission_handler.dart';
+import 'package:orientation/orientation.dart';
+
+import 'movie_page.dart';
 //滚动的最大值,阈值
 const APPBAR_SCROLL_OFFSET = 100;
 //appbar透明度
@@ -61,6 +64,11 @@ class _HomePageState extends State<HomePage> {
       title: Text('webView的使用'),
       onTap: (){
         NavigatorUtil.pushRightBack(context, WebView(url: 'https://www.baidu.com',title: '百度一下',backForbid: true,));
+      },
+    ))..add(ListTile(
+      title: Text('视频播放插件使用'),
+      onTap: (){
+        NavigatorUtil.pushRightBack(context, MoviePage());
       },
     ));
     hideScreen();
