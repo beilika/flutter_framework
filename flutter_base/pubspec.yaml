@@ -29,6 +29,9 @@ dependencies:
   # 上拉加载，下拉刷新
   flutter_easyrefresh: ^2.1.1
 
+  # webView加载网页框架
+  flutter_webview_plugin: ^0.3.11
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

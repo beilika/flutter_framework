@@ -57,6 +57,11 @@ class _HomePageState extends State<HomePage> {
       onTap: (){
         NavigatorUtil.pushRightBack(context, TravelPage());
       },
+    ))..add(ListTile(
+      title: Text('webView的使用'),
+      onTap: (){
+        NavigatorUtil.pushRightBack(context, WebView(url: 'https://www.baidu.com',title: '百度一下',backForbid: true,));
+      },
     ));
     hideScreen();
   }

@@ -38,7 +38,8 @@ Widget myAppBar(context,title,
           onPressed: onPressed == null ? () { Navigator.of(context).pop(); } : onPressed,
         );
       },
-    ) : null,
+    ) : Builder(builder: (BuildContext context) {return Container();},
+    ),
     bottom: tabBar != null ? PreferredSize(
       preferredSize: Size.fromHeight(60.h),
       child: Material(color: Colors.white, child: tabBar,),
