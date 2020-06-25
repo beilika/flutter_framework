@@ -76,7 +76,6 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-
     App.initApp(context);
     //Scaffold 实现了基本的 Material Design 布局结构
     return Scaffold(
