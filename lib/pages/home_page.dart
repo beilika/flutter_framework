@@ -11,6 +11,7 @@ import 'package:flutterlogin/login.dart';
 import 'package:permission_handler/permission_handler.dart';
 
 import 'file_picker_demo.dart';
+import 'image_picker_demo.dart';
 import 'movie_page.dart';
 //滚动的最大值,阈值
 const APPBAR_SCROLL_OFFSET = 100;
@@ -34,7 +35,7 @@ class _HomePageState extends State<HomePage> {
   @override
   void initState() {
     super.initState();
-    list..add(ListTile(
+    list..add(MySwiper(imageUrls: _imageUrls))..add(ListTile(
           title: Text('点击跳转登录'),
           onTap: (){
             NavigatorUtil.pushRightBack(context, Login());
@@ -74,6 +75,11 @@ class _HomePageState extends State<HomePage> {
       onTap: (){
         NavigatorUtil.pushRightBack(context, FilePickerDemo());
       },
+    ))..add(ListTile(
+      title: Text('拍照和视频录制'),
+      onTap: (){
+        NavigatorUtil.pushRightBack(context, ImagePickerDemo());
+      },
     ));
     hideScreen();
   }
@@ -102,19 +108,11 @@ class _HomePageState extends State<HomePage> {
                       _onScroll(scrollNotification.metrics.pixels);
                     }
                   },
-                  child: ListView(
-                    children: <Widget>[
-                      MySwiper(imageUrls: _imageUrls),
-                      Container(
-                        height: ScreenUtil.screenHeight,
-                        //ListTile 通常用于在 Flutter 中填充 ListView
-                        child: ListView.builder(
-                          itemCount: list.length,
-                          itemBuilder: (context,index){
-                            return list[index];
-                          }),
-                      )
-                    ],
+                  child: ListView.builder(
+                    itemCount: list.length,
+                    itemBuilder: (context,index){
+                      return list[index];
+                    }
                   ),
                 )
             ),
