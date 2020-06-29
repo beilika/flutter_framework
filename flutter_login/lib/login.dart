@@ -223,16 +223,7 @@ class _LoginState extends State<Login> with SingleTickerProviderStateMixin,Autom
 
   startLogin() {
     //开启加载动画
-    showDialog<Null>(
-        context: _context, //BuildContext对象
-        barrierDismissible: false,
-        builder: (BuildContext context) {
-          return LoadingDialog(
-            //调用对话框
-            text: '正在登录...',
-          );
-        });
-
+    showLoadingDialog(_context,content: '正在登录...');
     //加密账号密码.
 //    encryptData();
 

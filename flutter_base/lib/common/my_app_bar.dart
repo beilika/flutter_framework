@@ -31,15 +31,10 @@ Widget myAppBar(context,title,
       tabBar}) {
   return AppBar(
     //返回图标
-    leading: isShowLead ? Builder(
-      builder: (BuildContext context) {
-        return IconButton(
-          icon: Icon(leadingIcon),
-          onPressed: onPressed == null ? () { Navigator.of(context).pop(); } : onPressed,
-        );
-      },
-    ) : Builder(builder: (BuildContext context) {return Container();},
-    ),
+    leading: isShowLead ? IconButton(
+      icon: Icon(leadingIcon),
+      onPressed: onPressed == null ? () { Navigator.of(context).pop(); } : onPressed,
+    ) : Container(),
     bottom: tabBar != null ? PreferredSize(
       preferredSize: Size.fromHeight(60.h),
       child: Material(color: Colors.white, child: tabBar,),
