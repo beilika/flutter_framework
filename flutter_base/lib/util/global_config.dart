@@ -27,6 +27,8 @@ class GlobalConfig {
   static Color backBtnColor = Color.fromRGBO(151, 151, 151, 1.0);
 
   static TextStyle navTextStyle = TextStyle(fontSize: 18.0, color: Color.fromRGBO(51, 51, 51, 1),fontWeight: FontWeight.w400);
+  //线条的默认颜色
+  static Color line_color() => Color(0xffDDDDDD);
 
 }
 

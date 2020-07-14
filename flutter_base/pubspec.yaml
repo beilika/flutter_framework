@@ -11,6 +11,10 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+
+  #语言国际化
+  flutter_localizations:
+    sdk: flutter
   #数据持久化
   shared_preferences: "^0.4.2"
   # 屏幕适配组件

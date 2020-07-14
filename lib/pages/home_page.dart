@@ -4,11 +4,11 @@ import 'package:flutter_framework/pages/travel_page.dart';
 import 'package:flutter_framework/widget/my_app_bar.dart';
 import 'package:flutter_framework/widget/drawer/my_drawer.dart';
 import 'package:flutter_framework/widget/my_swiper.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_splash_screen/flutter_splash_screen.dart';
 import 'package:flutterbase/base_exp.dart';
 import 'package:flutterlogin/login.dart';
 import 'package:permission_handler/permission_handler.dart';
+import 'package:flutterbase/common/my_app_common.dart';
 
 import 'file_picker_demo.dart';
 import 'image_picker_demo.dart';
@@ -87,41 +87,40 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     App.initApp(context);
-    //Scaffold 实现了基本的 Material Design 布局结构
-    return Scaffold(
+    return MyAppCommon.getApp(widget:Scaffold(
       //Stack 层叠组件，前面的元素在上面，后面的元素在下面
-        body: Stack(
-          children: <Widget>[
-            // MediaQuery 具有删除padding的属性
-            MediaQuery.removePadding(
-              //移除顶部padding
-                removeTop: true,
-                context: context,
-                //NotificationListener 可以监听列表的滚动
-                child:NotificationListener(
-                  //监听列表的滚动
-                  // ignore: missing_return
-                  onNotification: (scrollNotification){
-                    //scrollNotification.depth 第0 个元素，也就是listview的第一个元素开始滚动的时候
-                    if(scrollNotification is ScrollNotification && scrollNotification.depth == 0){
-                      //滚动且是列表滚动的时候
-                      _onScroll(scrollNotification.metrics.pixels);
-                    }
-                  },
-                  child: ListView.builder(
+      body: Stack(
+        children: <Widget>[
+          // MediaQuery 具有删除padding的属性
+          MediaQuery.removePadding(
+            //移除顶部padding
+              removeTop: true,
+              context: context,
+              //NotificationListener 可以监听列表的滚动
+              child:NotificationListener(
+                //监听列表的滚动
+                // ignore: missing_return
+                onNotification: (scrollNotification){
+                  //scrollNotification.depth 第0 个元素，也就是listview的第一个元素开始滚动的时候
+                  if(scrollNotification is ScrollNotification && scrollNotification.depth == 0){
+                    //滚动且是列表滚动的时候
+                    _onScroll(scrollNotification.metrics.pixels);
+                  }
+                },
+                child: ListView.builder(
                     itemCount: list.length,
                     itemBuilder: (context,index){
                       return list[index];
                     }
-                  ),
-                )
-            ),
-            MyAppBar(appBarAlpha: appBarAlpha,),
-          ],
-        ),
+                ),
+              )
+          ),
+          MyAppBar(appBarAlpha: appBarAlpha,),
+        ],
+      ),
       //左边抽屉
       drawer: MyDrawer(),
-    );
+    ));
   }
   ///延迟隐藏闪屏页
   Future<void> hideScreen() async {
