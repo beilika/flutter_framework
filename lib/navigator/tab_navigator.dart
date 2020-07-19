@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_framework/pages/home_page.dart';
-import 'package:flutter_framework/pages/my_page.dart';
-import 'package:flutter_framework/pages/search_page.dart';
-import 'package:flutter_framework/pages/travel_page.dart';
+import 'package:framework_flutter/pages/home_page.dart';
+import 'package:framework_flutter/pages/my_page.dart';
+import 'package:framework_flutter/pages/search_page.dart';
+import 'package:framework_flutter/pages/travel_page.dart';
 //选中的颜色和未选中的颜色
 final _defaultColor = Colors.grey;
 final _activeColor = Colors.blue;

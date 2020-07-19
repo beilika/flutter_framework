@@ -1,12 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_framework/pages/travel_page.dart';
-import 'package:flutter_framework/widget/my_app_bar.dart';
-import 'package:flutter_framework/widget/drawer/my_drawer.dart';
-import 'package:flutter_framework/widget/my_swiper.dart';
 import 'package:flutter_splash_screen/flutter_splash_screen.dart';
 import 'package:flutterbase/base_exp.dart';
 import 'package:flutterlogin/login.dart';
+import 'package:framework_flutter/pages/travel_page.dart';
+import 'package:framework_flutter/widget/drawer/my_drawer.dart';
+import 'package:framework_flutter/widget/my_app_bar.dart';
+import 'package:framework_flutter/widget/my_swiper.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:flutterbase/common/my_app_common.dart';
 

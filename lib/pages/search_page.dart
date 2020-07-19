@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_framework/widget/search_bar_delegate.dart';
 import 'package:flutterbase/base_exp.dart';
+import 'package:framework_flutter/widget/search_bar_delegate.dart';
 
 /*搜索页面*/
 class SearchPage extends StatefulWidget {

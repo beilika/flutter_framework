@@ -16,7 +16,7 @@ class App {
     //设置字体大小根据系统的“字体大小”辅助选项来进行缩放,默认为false
 //    ScreenUtil.init(allowFontScaling: true);
     //默认是1920*1080大小
-    ScreenUtil.init(width: 375.0,height: 812.0);
+    ScreenUtil.init(context,width: 375,height: 812);
 
     /// 设置屏幕方向
     setOrientationUp();

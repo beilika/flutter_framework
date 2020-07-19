@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_framework/pages/home_page.dart';
-import 'package:flutter_framework/pages/my_page.dart';
-import 'package:flutter_framework/pages/search_page.dart';
-import 'file:///E:/study/flutter/flutter_framework/flutter_base/lib/util/navigator_util.dart';
+import 'package:flutterbase/util/navigator_util.dart';
+import 'package:framework_flutter/pages/home_page.dart';
+import 'package:framework_flutter/pages/my_page.dart';
+import 'package:framework_flutter/pages/search_page.dart';
 /*不规则底部导航*/
 class MyBottomAppBar extends StatefulWidget {
   @override

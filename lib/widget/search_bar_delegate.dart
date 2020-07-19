@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_framework/data/asset.dart';
+import 'package:framework_flutter/data/asset.dart';
 /*搜索框*/
 class searchBarDelegate extends SearchDelegate<String> {
   //右侧的图标

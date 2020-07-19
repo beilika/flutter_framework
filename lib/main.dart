@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_framework/navigator/tab_navigator.dart';
 import 'package:flutterbase/app/app.dart';
 import 'navigator/my_bottom_app_bar.dart';
 import 'package:flutterbase/common/my_app_common.dart';
