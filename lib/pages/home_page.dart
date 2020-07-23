@@ -80,6 +80,23 @@ class _HomePageState extends State<HomePage> {
       onTap: (){
         NavigatorUtil.pushRightBack(context, ImagePickerDemo());
       },
+    ))..add(ListTile(
+      title: Text('查看大图'),
+      onTap: (){
+        NavigatorUtil.pushRightBack(context, PhotoViewGalleryScreen(
+          images: [
+            'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2700645530,2666290277&fm=26&gp=0.jpg',
+            'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3802653641,1514041303&fm=26&gp=0.jpg',
+          ],
+          index: 0,
+          heroTag: '美女',
+        ));
+      },
+    ))..add(ListTile(
+      title: Text('文件下载'),
+      onTap: (){
+        FileDownload().doDownloadOperation(context, filePathAll: 'https://einvoicelink.51fapiao.cn:8181/FPFX/actions/52ffc5c947a321f8907478303188544709b299', fileName: "learning_android_studio.pdf");
+      },
     ));
     hideScreen();
   }

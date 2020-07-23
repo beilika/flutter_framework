@@ -26,3 +26,9 @@ export 'easyrefresh/header.dart';
 export 'easyrefresh/footer.dart';
 
 export 'webview/webview.dart';
+
+//图片
+export 'img/photoview_gallery_screen.dart';
+
+//文件
+export 'file/file_download.dart';
