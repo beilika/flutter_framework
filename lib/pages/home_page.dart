@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_splash_screen/flutter_splash_screen.dart';
 import 'package:flutterbase/base_exp.dart';
 import 'package:flutterlogin/login.dart';
 import 'package:framework_flutter/pages/travel_page.dart';
@@ -144,7 +143,7 @@ class _HomePageState extends State<HomePage> {
   ///延迟隐藏闪屏页
   Future<void> hideScreen() async {
     Future.delayed(Duration(milliseconds: 600), () {
-      FlutterSplashScreen.hide();
+//      FlutterSplashScreen.hide();
     });
   }
   //滚动处理操作
