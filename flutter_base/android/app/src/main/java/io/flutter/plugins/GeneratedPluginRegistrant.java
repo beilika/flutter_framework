@@ -13,6 +13,7 @@ import io.flutter.plugins.packageinfo.PackageInfoPlugin;
 import io.flutter.plugins.pathprovider.PathProviderPlugin;
 import com.baseflow.permissionhandler.PermissionHandlerPlugin;
 import io.flutter.plugins.sharedpreferences.SharedPreferencesPlugin;
+import tech.jitao.umeng_analytics_plugin.UmengAnalyticsPlugin;
 import io.flutter.plugins.urllauncher.UrlLauncherPlugin;
 import io.flutter.plugins.videoplayer.VideoPlayerPlugin;
 import creativecreatorormaybenot.wakelock.WakelockPlugin;
@@ -38,6 +39,7 @@ public final class GeneratedPluginRegistrant {
     PathProviderPlugin.registerWith(registry.registrarFor("io.flutter.plugins.pathprovider.PathProviderPlugin"));
     PermissionHandlerPlugin.registerWith(registry.registrarFor("com.baseflow.permissionhandler.PermissionHandlerPlugin"));
     SharedPreferencesPlugin.registerWith(registry.registrarFor("io.flutter.plugins.sharedpreferences.SharedPreferencesPlugin"));
+    UmengAnalyticsPlugin.registerWith(registry.registrarFor("tech.jitao.umeng_analytics_plugin.UmengAnalyticsPlugin"));
     UrlLauncherPlugin.registerWith(registry.registrarFor("io.flutter.plugins.urllauncher.UrlLauncherPlugin"));
     VideoPlayerPlugin.registerWith(registry.registrarFor("io.flutter.plugins.videoplayer.VideoPlayerPlugin"));
     WakelockPlugin.registerWith(registry.registrarFor("creativecreatorormaybenot.wakelock.WakelockPlugin"));

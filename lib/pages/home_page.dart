@@ -9,6 +9,7 @@ import 'package:framework_flutter/widget/my_app_bar.dart';
 import 'package:framework_flutter/widget/my_swiper.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:flutterbase/common/my_app_common.dart';
+import 'package:umeng_analytics_plugin/umeng_analytics_plugin.dart';
 
 import 'file_picker_demo.dart';
 import 'image_picker_demo.dart';
@@ -35,6 +36,7 @@ class _HomePageState extends State<HomePage> {
   @override
   void initState() {
     super.initState();
+    UmengAnalyticsPlugin.pageStart("HomePage");
     list..add(MySwiper(imageUrls: _imageUrls))..add(ListTile(
           title: Text('点击跳转登录'),
           onTap: (){
@@ -158,5 +160,11 @@ class _HomePageState extends State<HomePage> {
     setState(() {
       appBarAlpha = alpha;
     });
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    UmengAnalyticsPlugin.pageEnd("HomePage");
   }
 }

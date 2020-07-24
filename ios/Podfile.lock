@@ -69,6 +69,10 @@ PODS:
     - SDWebImage/Core (~> 5.6)
   - shared_preferences (0.0.1):
     - Flutter
+  - umeng_analytics_plugin (0.0.1):
+    - Flutter
+    - UMengAnalytics-NO-IDFA
+  - UMengAnalytics-NO-IDFA (4.2.5)
   - url_launcher (0.0.1):
     - Flutter
   - url_launcher_linux (0.0.1):
@@ -101,6 +105,7 @@ DEPENDENCIES:
   - path_provider (from `.symlinks/plugins/path_provider/ios`)
   - permission_handler (from `.symlinks/plugins/permission_handler/ios`)
   - shared_preferences (from `.symlinks/plugins/shared_preferences/ios`)
+  - umeng_analytics_plugin (from `.symlinks/plugins/umeng_analytics_plugin/ios`)
   - url_launcher (from `.symlinks/plugins/url_launcher/ios`)
   - url_launcher_linux (from `.symlinks/plugins/url_launcher_linux/ios`)
   - url_launcher_macos (from `.symlinks/plugins/url_launcher_macos/ios`)
@@ -116,6 +121,7 @@ SPEC REPOS:
     - FLAnimatedImage
     - SDWebImage
     - SDWebImageFLPlugin
+    - UMengAnalytics-NO-IDFA
 
 EXTERNAL SOURCES:
   file_picker:
@@ -150,6 +156,8 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/permission_handler/ios"
   shared_preferences:
     :path: ".symlinks/plugins/shared_preferences/ios"
+  umeng_analytics_plugin:
+    :path: ".symlinks/plugins/umeng_analytics_plugin/ios"
   url_launcher:
     :path: ".symlinks/plugins/url_launcher/ios"
   url_launcher_linux:
@@ -187,6 +195,8 @@ SPEC CHECKSUMS:
   SDWebImage: cf6922231e95550934da2ada0f20f2becf2ceba9
   SDWebImageFLPlugin: 6c2295fb1242d44467c6c87dc5db6b0a13228fd8
   shared_preferences: 1feebfa37bb57264736e16865e7ffae7fc99b523
+  umeng_analytics_plugin: 7035dfb8c5636e50429ab935125e5a3f0d23e72e
+  UMengAnalytics-NO-IDFA: 16666e32edce5be44ae5b14aaaa7f3582e09d6ab
   url_launcher: 6fef411d543ceb26efce54b05a0a40bfd74cbbef
   url_launcher_linux: ac237cb7a8058736e4aae38bdbcc748a4b394cc0
   url_launcher_macos: fd7894421cd39320dce5f292fc99ea9270b2a313

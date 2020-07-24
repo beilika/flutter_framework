@@ -15,6 +15,7 @@ Future<void> main() async {
 
   //设置android沉侵式状态栏
   App.submergence_status_bar();
+  App.initUmeng();
 }
 
 class MyApp extends StatelessWidget {

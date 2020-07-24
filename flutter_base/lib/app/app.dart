@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutterbase/util/my_toast.dart';
 import 'package:orientation/orientation.dart';
+import 'package:umeng_analytics_plugin/umeng_analytics_plugin.dart';
 
 /// @author 强周亮(qiangzhouliang)
 /// @desc app 公共的一些操作，如页面初始化等
@@ -22,6 +23,8 @@ class App {
     setOrientationUp();
     //初始化toast轻提示
     MyToast.init(context);
+    //初始友盟统计的一些功能
+//    initUmeng();
   }
 
   /// android 设置状态栏为透明的沉浸
@@ -42,5 +45,15 @@ class App {
     /// DeviceOrientation.portraitDown,//只能纵向
 //    SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
     OrientationPlugin.forceOrientation(DeviceOrientation.portraitUp);
+  }
+
+  //初始化友盟统计的一些工作
+  static initUmeng(){
+    UmengAnalyticsPlugin.init(
+      iosKey: "5f1a38eeb4fa6023ce194f84",
+      androidKey: "5f1a3894b4fa6023ce194f68",
+      channel: "flutter_framework",
+      logEnabled: true
+    );
   }
 }

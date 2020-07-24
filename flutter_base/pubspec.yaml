@@ -57,6 +57,9 @@ dependencies:
   path_provider: 1.4.5
   progress_dialog: ^1.1.0+1
 
+  # 友盟统计
+  umeng_analytics_plugin: ^1.0.3
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
