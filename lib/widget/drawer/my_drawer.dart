@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutterbase/update/app_update_util.dart';
+import 'package:flutterbase/base_exp.dart';
 import 'package:framework_flutter/widget/drawer/smart_drawer.dart';
 
 /// @author 强周亮(qiangzhouliang)
@@ -52,7 +52,7 @@ class _MyDrawerState extends State<MyDrawer> {
         ],
       ),
       callback: (isOpen) {
-        print('打开状态：$isOpen');
+        LogUtil.d('打开状态：$isOpen');
       },
     );
   }

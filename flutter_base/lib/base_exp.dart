@@ -32,3 +32,6 @@ export 'img/photoview_gallery_screen.dart';
 
 //文件
 export 'file/file_download.dart';
+
+//log
+export 'util/log/log_util.dart';

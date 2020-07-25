@@ -1,21 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutterbase/app/app.dart';
+import 'package:flutterbase/base_exp.dart';
 import 'navigator/my_bottom_app_bar.dart';
 import 'package:flutterbase/common/my_app_common.dart';
-import 'package:flutter_downloader/flutter_downloader.dart';
 /// flutter 应用程序入口
 Future<void> main() async {
-  //下载文件,初始化只能进行一次,写在其他页面调用第二次会报错
-  WidgetsFlutterBinding.ensureInitialized();
-  await FlutterDownloader.initialize(
-    debug: false,
-  );
 
+  App.initMain();
   runApp(MyApp());
-
-  //设置android沉侵式状态栏
-  App.submergence_status_bar();
-  App.initUmeng();
 }
 
 class MyApp extends StatelessWidget {

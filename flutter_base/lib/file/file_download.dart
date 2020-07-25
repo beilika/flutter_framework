@@ -73,11 +73,11 @@ class FileDownload{
     }
 
     if (haveDown) {
-      print('文件存在');
+      LogUtil.d('文件存在');
       pr.hide();
       NavigatorUtil.push(context, FileReaderPage(filePath: _filePath, fileName: fileName,));
     } else {
-      print('文件不存在');
+      LogUtil.d('文件不存在');
       CommonDialog.show(context,"在使用查看文件功能前，您先需要授予读写手机存储的权限，否则，您将无法使用该功能！",doneClicked: (){
         PermissionUtil(success: (){
           // 下载链接
