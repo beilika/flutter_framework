@@ -9,6 +9,8 @@ import 'package:framework_flutter/widget/my_swiper.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:flutterbase/common/my_app_common.dart';
 import 'package:umeng_analytics_plugin/umeng_analytics_plugin.dart';
+import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
+import 'package:date_format/date_format.dart';
 
 import 'file_picker_demo.dart';
 import 'image_picker_demo.dart';
@@ -97,6 +99,16 @@ class _HomePageState extends State<HomePage> {
       title: Text('文件下载'),
       onTap: (){
         FileDownload().doDownloadOperation(context, filePathAll: 'https://einvoicelink.51fapiao.cn:8181/FPFX/actions/52ffc5c947a321f8907478303188544709b299', fileName: "learning_android_studio.pdf");
+      },
+    ))..add(ListTile(
+      title: Text('时间选择'),
+      onTap: (){
+        DatePicker.showDatePicker(
+            context, showTitleActions: true,
+            minTime:DateTime.now(),
+            onConfirm: (date) {
+              MyToast.toast(msg: formatDate(date, [yyyy, "-", mm, "-", dd]));
+            }, locale: LocaleType.zh);
       },
     ));
     hideScreen();
