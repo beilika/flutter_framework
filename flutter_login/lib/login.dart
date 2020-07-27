@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutterbase/base_exp.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:sp_util/sp_util.dart';
 
 import 'login_state_tool.dart';
 import 'login_textField.dart';
@@ -200,12 +200,11 @@ class _LoginState extends State<Login> with SingleTickerProviderStateMixin,Autom
   }
 
   getStateData() async {
-    final prefs = await SharedPreferences.getInstance();
-    bool autoLogin = prefs.getBool('AutoLogin');
-    bool rememberPassword = prefs.getBool('RememberPassword');
+    bool autoLogin = SpUtil.getBool('AutoLogin');
+    bool rememberPassword = SpUtil.getBool('RememberPassword');
 
-    String accountStr = prefs.getString('AccountStr');
-    String passwordStr = prefs.getString('PasswordStr');
+    String accountStr = SpUtil.getString('AccountStr');
+    String passwordStr = SpUtil.getString('PasswordStr');
 
     setState(() {
       _autoLoginBtnSelected = autoLogin == null ? false : autoLogin;

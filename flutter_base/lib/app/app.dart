@@ -8,6 +8,7 @@ import 'package:flutterbase/util/log/log_util.dart';
 import 'package:flutterbase/util/log/logger.dart';
 import 'package:flutterbase/util/my_toast.dart';
 import 'package:orientation/orientation.dart';
+import 'package:sp_util/sp_util.dart';
 import 'package:umeng_analytics_plugin/umeng_analytics_plugin.dart';
 
 /// @author 强周亮(qiangzhouliang)
@@ -33,6 +34,7 @@ class App {
     /// 设置屏幕方向
     _setOrientationUp();
     _initLog();
+    _initSpUtil();
   }
 
   /// android 设置状态栏为透明的沉浸
@@ -84,5 +86,9 @@ class App {
     await FlutterDownloader.initialize(
       debug: false,
     );
+  }
+
+  static _initSpUtil() async {
+    await SpUtil.getInstance();
   }
 }
