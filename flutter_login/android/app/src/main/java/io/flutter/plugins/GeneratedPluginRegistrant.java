@@ -6,7 +6,6 @@ import vn.hunghd.flutterdownloader.FlutterDownloaderPlugin;
 import com.webview.filereader.FlutterFileReaderPlugin;
 import io.flutter.plugins.flutter_plugin_android_lifecycle.FlutterAndroidLifecyclePlugin;
 import com.flutter_webview_plugin.FlutterWebviewPlugin;
-import qzl.com.flutterbase.FlutterbasePlugin;
 import io.flutter.plugins.imagepicker.ImagePickerPlugin;
 import com.github.sososdk.orientation.OrientationPlugin;
 import sk.fourq.otaupdate.OtaUpdatePlugin;
@@ -18,6 +17,7 @@ import tech.jitao.umeng_analytics_plugin.UmengAnalyticsPlugin;
 import io.flutter.plugins.urllauncher.UrlLauncherPlugin;
 import io.flutter.plugins.videoplayer.VideoPlayerPlugin;
 import creativecreatorormaybenot.wakelock.WakelockPlugin;
+import qzl.com.flutterbase.FlutterbasePlugin;
 import qzl.com.flutterlogin.FlutterloginPlugin;
 
 /**
@@ -33,7 +33,6 @@ public final class GeneratedPluginRegistrant {
     FlutterFileReaderPlugin.registerWith(registry.registrarFor("com.webview.filereader.FlutterFileReaderPlugin"));
     FlutterAndroidLifecyclePlugin.registerWith(registry.registrarFor("io.flutter.plugins.flutter_plugin_android_lifecycle.FlutterAndroidLifecyclePlugin"));
     FlutterWebviewPlugin.registerWith(registry.registrarFor("com.flutter_webview_plugin.FlutterWebviewPlugin"));
-    FlutterbasePlugin.registerWith(registry.registrarFor("qzl.com.flutterbase.FlutterbasePlugin"));
     ImagePickerPlugin.registerWith(registry.registrarFor("io.flutter.plugins.imagepicker.ImagePickerPlugin"));
     OrientationPlugin.registerWith(registry.registrarFor("com.github.sososdk.orientation.OrientationPlugin"));
     OtaUpdatePlugin.registerWith(registry.registrarFor("sk.fourq.otaupdate.OtaUpdatePlugin"));
@@ -45,6 +44,7 @@ public final class GeneratedPluginRegistrant {
     UrlLauncherPlugin.registerWith(registry.registrarFor("io.flutter.plugins.urllauncher.UrlLauncherPlugin"));
     VideoPlayerPlugin.registerWith(registry.registrarFor("io.flutter.plugins.videoplayer.VideoPlayerPlugin"));
     WakelockPlugin.registerWith(registry.registrarFor("creativecreatorormaybenot.wakelock.WakelockPlugin"));
+    FlutterbasePlugin.registerWith(registry.registrarFor("qzl.com.flutterbase.FlutterbasePlugin"));
     FlutterloginPlugin.registerWith(registry.registrarFor("qzl.com.flutterlogin.FlutterloginPlugin"));
   }
 
