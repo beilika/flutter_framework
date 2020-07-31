@@ -5,6 +5,11 @@ import 'package:flutter/material.dart';
  */
 class GlobalConfig {
 
+  //是否加密参数 true 加密，false 不加密
+  static bool isEncryPara = true;
+  //配置不加密的URL
+  static var passUrl = [];
+
   static Color bluefontColor = Color.fromRGBO(38,154,243, 1.0);
 
   //自定义标题色

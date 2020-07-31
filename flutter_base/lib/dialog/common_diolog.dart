@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutterbase/base_exp.dart';
-import 'package:flutterbase/util/global_config.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 typedef void DoneClicked();

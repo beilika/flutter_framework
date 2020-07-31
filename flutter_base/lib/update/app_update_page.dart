@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutterbase/util/global_config.dart';
+import 'package:flutterbase/common/global_config.dart';
 import 'package:flutterbase/util/my_toast.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ota_update/ota_update.dart';

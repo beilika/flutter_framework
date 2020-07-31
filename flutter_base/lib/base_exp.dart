@@ -2,7 +2,6 @@ export 'app/app.dart';
 
 ///util工具包
 export 'util/my_toast.dart';
-export 'util/global_config.dart';
 export 'util/navigator_util.dart';
 export 'util/userManager.dart';
 export 'util/aes_util.dart';
@@ -40,6 +39,7 @@ export 'common/base_widget_util.dart';
 export 'common/my_app_bar.dart';
 ///APP公共入口封装
 export 'common/my_app_common.dart';
+export 'common/global_config.dart';
 
 
 ///上拉加载 下拉刷新

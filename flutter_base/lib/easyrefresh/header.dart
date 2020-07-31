@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_easyrefresh/easy_refresh.dart';
-import 'package:flutterbase/util/global_config.dart';
+import 'package:flutterbase/common/global_config.dart';
 
 ClassicalHeader header(BuildContext context,{headerFloat = false}) {
   return ClassicalHeader(

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutterbase/util/global_config.dart';
+import 'package:flutterbase/common/global_config.dart';
 
 import 'my_footer.dart';
 ClassicalFooter footer() {
