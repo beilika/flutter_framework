@@ -3,9 +3,15 @@ import 'package:flutterbase/util/userManager.dart';
 
 import 'api.dart';
 import 'httpManager.dart';
-
+///请求成功时的接口回调
 typedef HttpSuccessCallBack(data);
+/// 请求失败时的接口回调
 typedef HttpOnErrorCallBack(error);
+
+/// @author 强周亮(qiangzhouliang)
+/// @desc http请求工具类封装
+/// @email 2538096489@qq.com
+/// @time 2020/7/31 09:15
 class HttpUtil {
   final HttpSuccessCallBack onSuccess;
   final HttpOnErrorCallBack onError;

@@ -49,12 +49,12 @@ class LoadingDialog extends Dialog {
 
 Future showLoadingDialog(BuildContext context,{content = '加载中...'}) {
   return showDialog(
-      context: context,
-      barrierDismissible: false,
-      builder: (BuildContext context) {
-        return new LoadingDialog(
-          //调用对话框
-          text: content,
-        );
-      });
+    context: context,
+    barrierDismissible: false,
+    builder: (BuildContext context) {
+      return new LoadingDialog(
+        //调用对话框
+        text: content,
+      );
+    });
 }

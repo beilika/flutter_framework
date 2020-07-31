@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutterbase/common/line_widget.dart';
+import 'package:flutterbase/base_exp.dart';
 import 'package:flutterbase/util/global_config.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -149,7 +149,7 @@ class CommonDialog extends Dialog {
         //创建透明层
         type: MaterialType.transparency, //透明类型
         child: new Center(
-            child: Container(
+          child: Container(
           decoration: new BoxDecoration(
             color: Colors.transparent,
             border: new Border.all(width: 0, color: Colors.transparent),
@@ -161,7 +161,7 @@ class CommonDialog extends Dialog {
             children: <Widget>[
               titleImgWidget,
               contentWidget,
-              LineWidget.line_w(),
+              BaseWidgetUtil.line_w(),
               reviewBtnWidget,
             ],
           ),

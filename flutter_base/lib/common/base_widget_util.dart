@@ -7,6 +7,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 /// @email 2538096489@qq.com
 /// @time 2020/6/30 11:43
 class BaseWidgetUtil{
+  static const Color _color = Color.fromRGBO(221, 221, 221, 1);
+  //展示宽度线
+  static Divider line_w({color = _color}) => Divider(height: 0.8,color: color);
   //横线
   static Widget lineBase({height = 0.5}) => Container( height: height, color: GlobalConfig.line_color(),);
 
