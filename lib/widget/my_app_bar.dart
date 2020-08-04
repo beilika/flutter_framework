@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutterbase/util/global_config.dart';
+import 'package:flutterbase/base_exp.dart';
 
 class MyAppBar extends StatelessWidget {
   //appbar透明度
